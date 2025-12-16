@@ -1,0 +1,12 @@
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--main-text-color-light);
+    font-weight: 700;
+}
+
+.navigationLink {
+    display: block;
+    padding-block: 1.5rem;
+}

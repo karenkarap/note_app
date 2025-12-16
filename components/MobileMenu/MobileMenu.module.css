@@ -1,0 +1,89 @@
+.backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: rgba(46, 47, 66, 0.4);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: #f2f4f7;
+    z-index: 11;
+    border-radius: 25px 0 0 25px;
+    padding: 4.5rem 1rem;
+    display: flex;
+    gap: 2.5rem;
+    animation: slideIn var(--transition);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.mobileNavList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    font-size: 1.5rem;
+    line-height: 1.12;
+    height: 100%;
+}
+
+.logout{
+    margin-top: auto;
+}
+
+.burgerBtnClose {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    border: none;
+    padding: 1rem;
+    color: var(--main-text-color-alternative);
+}
+
+.burgerBtnClose svg {
+    width: 24px;
+    height: 24px;
+}
+
+.active {
+    color: #0d6efd
+}
+
+.accardeon {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 1rem;
+    font-size: 1.25rem;
+}
