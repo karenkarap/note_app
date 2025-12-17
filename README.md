@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🗒️ Note App - NoteHub
 
-## Getting Started
+Modern and user-friendly note-taking app built with **React**, **TypeScript**, and **Next.js**.  
+Create your own profile, manage notes with full CRUD functionality, and organize them efficiently.
 
-First, run the development server:
+## 📝 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **User Authentication**: Register, login, and manage your profile
+- **Notes CRUD**: Create and delete notes easily
+- **Note Filtering**: Filter notes by tags or search keywords
+- **Responsive Design**: Fully responsive interface for desktop and mobile
+- **Loading & Error States**: Professional loading indicators and error handling
+- **Pagination**: Smooth pagination for viewing large lists of notes
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: React 18, TypeScript
+- **Routing**: Next.js App Router
+- **State Management**: Zustand
+- **Data Fetching**: TanStack Query (React Query), Axios
+- **Styling**: CSS Modules
+- **Form Handling & Validation**: Yup, React Hook Form
+- **Build Tool**: Vite
+- **Deployment**: Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Usage
 
-## Learn More
+1. **Register or Login**: Create an account or log in with existing credentials  
+2. **Create Notes**: Click “Add Note” and fill in the form  
+3. **Delete Notes**: Use action buttons on each note  
+4. **Filter Notes**: Search by keywords or select tags  
+5. **Pagination**: Load more notes smoothly
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Key Features Explained
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **CRUD System**
+  - Create, read, delete support for notes  
+  - Real-time updates using React Query cache
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Filtering & Tags**
+  - Filter notes by tags or search keywords  
+  - Easy to organize and find notes
 
-## Deploy on Vercel
+- **Responsive UI**
+  - Works on mobile, tablet, and desktop  
+  - Adaptive layout with smooth interactions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Optimized Performance**
+  - React Query for efficient data fetching and caching  
+  - Loading states prevent blocking UI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📩 _Contact:_ myspecspace@gmail.com
