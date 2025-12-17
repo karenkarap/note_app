@@ -10,3 +10,12 @@
     display: block;
     padding-block: 1.5rem;
 }
+
+.navigationItem:hover,
+.navigationItem:focus {
+    color: #ddd;
+}
+
+.logoutButton {
+    padding-block: 1.5rem;
+}

@@ -4,20 +4,29 @@ import css from './NoteList.module.css';
 
 import Link from 'next/link';
 import { deleteNote } from '@/lib/api/clientApi';
+import { useState } from 'react';
+import { BeatLoader } from 'react-spinners';
 
 interface NoteListProps {
   data: Note[];
 }
 
 function NoteList({ data }: NoteListProps) {
+  const [deletingNote, setDeletingNote] = useState('');
+
   const queryClient = useQueryClient();
 
-  const { mutate } = useMutation({
+  const { mutate, isPending } = useMutation({
     mutationFn: (id: string) => deleteNote(id),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['notes'] });
     },
   });
+
+  const handleDelete = (id: string) => {
+    setDeletingNote(id);
+    mutate(id);
+  };
 
   return (
     <ul className={css.list}>
@@ -31,8 +40,12 @@ function NoteList({ data }: NoteListProps) {
             <Link className={css.details} href={`/notes/${note.id}`}>
               View details
             </Link>
-            <button onClick={() => mutate(note.id)} className={css.button}>
-              Delete
+            <button onClick={() => handleDelete(note.id)} className={css.button}>
+              {isPending && note.id === deletingNote ? (
+                <BeatLoader size={10} color="white" />
+              ) : (
+                'Delete'
+              )}
             </button>
           </div>
         </li>

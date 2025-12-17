@@ -1,7 +1,6 @@
+import { tagsList } from '@/types/note';
 import css from './sidebar.module.css';
 import Link from 'next/link';
-
-const tagsList: string[] = ['All', 'Todo', 'Work', 'Personal', 'Meeting', 'Shopping'];
 
 const Sidebar = async () => {
   return (

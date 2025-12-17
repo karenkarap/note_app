@@ -20,9 +20,17 @@ const DesktopMenu = ({ isAuthenticated, user, onLogout }: Props) => {
                 {user?.username}
               </Link>
             </li>
+
             <li>
               <TagsMenu />
             </li>
+
+            <li className={css.navigationItem}>
+              <Link href={'/notes/action/create'} className={css.navigationLink}>
+                Create note
+              </Link>
+            </li>
+
             <li className={css.navigationItem}>
               <button className={css.logoutButton} onClick={onLogout}>
                 Logout

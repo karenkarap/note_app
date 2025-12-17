@@ -1,7 +1,8 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { BeatLoader } from 'react-spinners';
 
 type Props = {
   children: React.ReactNode;
@@ -17,5 +18,5 @@ export default function AuthLayout({ children }: Props) {
     setLoading(false);
   }, [router]);
 
-  return <>{loading ? <div>Loading...</div> : children}</>;
+  return <>{loading ? <BeatLoader color="#0d6efd" size={20} /> : children}</>;
 }

@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import { useNoteDraftStore } from '@/lib/store/noteStore';
 import { createNote } from '@/lib/api/clientApi';
+import { useDebouncedCallback } from 'use-debounce';
 
 interface NoteFormValues {
   title: string;
@@ -32,10 +33,10 @@ function NoteForm() {
 
   const handleCancel = () => router.push('/notes/filter/All');
 
-  const handleSubmit = (formData: FormData) => {
+  const handleSubmit = useDebouncedCallback((formData: FormData) => {
     const values = Object.fromEntries(formData) as unknown as CreatedNote;
     mutate(values);
-  };
+  }, 300);
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>

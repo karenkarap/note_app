@@ -80,9 +80,21 @@ const MobileMenu = ({ isOpen, onClose, isAuthenticated, onLogout, user }: Mobile
                     {user?.username || 'Profile'}
                   </Link>
                 </li>
+                <li
+                  className={`${css.headerNavListItem} ${pathname === '/notes/action/create' ? css.active : ''}`}
+                >
+                  <Link href={'/notes/action/create'} onClick={handleClickMenu}>
+                    Create note
+                  </Link>
+                </li>
 
                 <li className={`${css.headerNavListItem} ${css.accardeon}`}>
-                  <div onClick={handleClickAccardeon}>Notes</div>
+                  <div
+                    onClick={handleClickAccardeon}
+                    className={`${pathname.startsWith('/notes/filter/') ? css.active : ''}`}
+                  >
+                    Notes
+                  </div>
                   {isOpenAccardion && (
                     <ul className={css.menuList}>
                       {tagsList.map((tag) => {
@@ -102,6 +114,7 @@ const MobileMenu = ({ isOpen, onClose, isAuthenticated, onLogout, user }: Mobile
                     </ul>
                   )}
                 </li>
+
                 <li className={`${css.headerNavListItem} ${css.logout}`}>
                   <button className={css.logoutButton} onClick={handleLogout}>
                     Logout
